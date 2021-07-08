@@ -5,7 +5,8 @@
   <div class="card-body">
     <p class="card-text">{{data.setup}}</p>
     <p class="card-text">{{data.punchline}}</p>
-    <button class="btn btn-lg btn-primary btn btn-dark" @click.prevent="getJoke">Get Joke</button>
+    <button class="btn btn-lg btn-primary btn btn-dark" @click="getJoke">Get Joke</button>
+    
   </div>
 </div>
   </div>
@@ -23,7 +24,6 @@ export default {
       const res = await fetch('https://official-joke-api.appspot.com/random_joke');
       const data = await res.json();
       this.data = data;
-      console.log("joke sent")
     }
   },
 };
